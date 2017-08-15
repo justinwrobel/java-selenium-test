@@ -9,7 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import com.github.webdriverextensions.Bot;
 import com.github.webdriverextensions.junitrunner.WebDriverRunner;
 import com.github.webdriverextensions.junitrunner.annotations.Chrome;
-import com.github.webdriverextensions.junitrunner.annotations.DriverPaths;
 import com.github.webdriverextensions.junitrunner.annotations.Firefox;
 import com.github.webdriverextensions.junitrunner.annotations.ScreenshotsPath;
 import com.github.webdriverextensions.junitrunner.annotations.TakeScreenshotOnFailure;
@@ -22,7 +21,6 @@ import lombok.extern.slf4j.Slf4j;
 @Firefox
 @TakeScreenshotOnFailure
 @ScreenshotsPath("target/screenshots")
-//@DriverPaths(firefox="drivers/geckodriver-mac-64bit", chrome="drivers/chromedriver-mac-64bit")
 public class WebDriverExtensionsExampleTest {
 
     @FindBy(xpath="//input[@id='lst-ib']")
