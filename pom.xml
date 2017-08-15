@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.laur</groupId>
+	<artifactId>java-selenium-test</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.18</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.webdriverextensions</groupId>
+			<artifactId>webdriverextensions</artifactId>
+			<version>3.5.2</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!--  https://github.com/webdriverextensions/webdriverextensions-maven-plugin -->
+			
+			<plugin>
+				<groupId>com.github.webdriverextensions</groupId>
+				<artifactId>webdriverextensions-maven-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>install-drivers</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<drivers>
+						<driver>
+							<name>internetexplorerdriver</name>
+							<version>3.4.0</version>
+						</driver>
+						<driver>
+							<name>chromedriver</name>
+							<version>2.31.0</version>
+						</driver>
+						<driver>
+							<name>geckodriver</name>
+							<version>0.18.0</version>
+						</driver>
+					</drivers>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
